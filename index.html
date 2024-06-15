@@ -23,7 +23,7 @@
             display: flex;
             justify-content: center;
             align-items: center; /* Center align items vertically */
-            height: 60vh; /* Full viewport height for demonstration */
+            height: 40vh; /* Full viewport height for demonstration */
             padding: 0 60px;
         }
 
@@ -74,7 +74,11 @@
         }
 
         .table-container {
-            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
         }
 
         .table-header {
@@ -86,24 +90,25 @@
         .custom-table {
             width: 100%;
             border-collapse: collapse;
+            background-color: transparent;
         }
 
         .custom-table th, .custom-table td {
-            border: 1px solid #dee2e6;
+            border: 1px solid #dee2e62c;
             padding: 8px;
             text-align: center;
         }
 
         .custom-table th {
-            background-color: #f8f9fa;
+            background-color: rgba(248, 249, 250, 0.2);
         }
 
         .custom-table tbody tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: rgba(248, 249, 250, 0.2);
         }
 
         .custom-table tbody tr:nth-child(odd) {
-            background-color: #ffffff;
+            background-color: rgba(105, 98, 90, 0.2);
         }
     </style>
     
@@ -160,31 +165,32 @@
   <div class="container">
     <div class="row">
       <!-- news column -->
-      <div class="col-md-7">
+      <div class="col-md-6">
         <h4 class="service-heading">Basic informations</h4>
         <ul class="text-muted">
-          <li class="text-muted">Videos are collected from talk show videos.</li>
-          <li class="text-muted"><b>4.3K videos</b> in total, including both standing and sitting positions.</li>
-          <li class="text-muted">Integrates a wide range of attributes, including facial, mesh, phoneme, text, body, hand, and joint annotations.</li>
+          <li class="text-muted">There are <b>290K</b> trailer videos in total, collected mostly from trailer videos.</li>
+          <li class="text-muted">Videos belong to diverse categories, including film & animation, entertainment, comedy, news & politics, etc.</li>
+          <li class="text-muted">Accompanied with a wide range of <b>multimodal captions</b> such as fine-grained video labels, descriptions, music captions, and speech transcriptions.</li>
         </ul>
       </div>
       <!-- characteristics column -->
-      <div class="col-md-5">
+      <div class="col-md-6">
         <h4 class="service-heading">Basic statistics</h4>
         <ul class="text-muted">
-          <li class="text-muted">Total duration of videos is <b>450 hours</b>.</li>
-          <li class="text-muted">Average duration of videos is <b>13min</b>.</li>
-          <li class="text-muted">More than <b>40M</b> gesture frames.</li>
-          <li class="text-muted"><b>80,720</b> word corpus in total.</li>
+          <li class="text-muted"><b>20M+</b> hight quality video clips.</li>
+          <li class="text-muted">Total duration of videos is <b>27.1k hours</b>.</li>
+          <li class="text-muted">Average duration of videos is <b>5s</b>.</li>
+          <li class="text-muted">Each clip has an average of <b>10.7</b> words in its frame captions.</li>
+          <li class="text-muted"><b>2M+</b> multimodal captioned subset, featuring over 7 types of captions, with videos averaging 13.8 seconds in duration.</li>
         </ul>
       </div>
 
     <!-- video banner row -->
     <div class="row text-center">
       <div class="col-md-12" style="text-align:center">
-        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 90px">Examples</h2>
+        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 120px">Examples</h2>
       </div>
-      <p style="text-align: left; margin-left: 15px; color: rgb(65, 63, 60)">
+      <p style="text-align: left; margin-left: 15px; margin-bottom: -20px; color: rgb(65, 63, 60)">
         Some video-captions examples in MMTrail dataset. Trailer video clips are shown on the left, and the corresponding captions are shown on the right. <br>
         If it takes too long to load the videos below, please view the videos <a href="https://www.udrop.com/folder/3043eddfc598ec1775a7cc38651ac515/Examples">here.</a>
       </p>
@@ -375,21 +381,21 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center" style="margin-bottom: -30px">
-        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 90px">MMTrail Statistics</h2>
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 150px">MMTrail Statistics</h2>
         <h3 class="section-subheading" style="color: rgb(65, 63, 60)">Dataset Analysis and Statistics</h3>
       </div>
     </div>
 
-  <h5 class="section-subheading" style="text-align:left; color: rgb(5, 4, 0); margin-top: 40px; margin-bottom: 20px"> MMTrail Data Pipeline:</h5>
+  <h5 class="section-subheading" style="text-align:left; color: rgb(5, 4, 0); margin-bottom: 20px"> MMTrail Data Pipeline:</h5>
     <div class="row justify-content-md-center text-center">
     <div class="col-md centered" style="padding:1rem;">
       <img src="./images/data-pipe.png" style="width: 90%" class="img-responsive"/> 
     </div>
     <p class="text-muted" style="text-align:left; margin-left:15px"> 
-  ---TODO-- Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
-  whether the posture in the dataset is built based on the mesh. As for the duration of meshed whole body
-  co-speech gesture datasets, our GES-X is 15 times of the second best one (i.e.BEAT2).
+      Data collection and cleaning pipeline of the MMTrail. Starting from the source video data,
+      we follow the metadata cleaning, scene-cut, and basic filtering to obtain the full list of MMTrail-20M
+      and High-Quality Selection to filter the MMTrail-3M.
     </p>
   </div>
 	<h5 class="section-subheading" style="text-align:left; color: rgb(5, 4, 0); margin-top: 40px; margin-bottom: 20px"> Scores of MMTrail Dataset:</h5>
@@ -398,9 +404,9 @@
         <img src="./images/pies-removebg.png" style="width: 90%" class="img-responsive"/> 
       </div>
       <p class="text-muted" style="text-align:left; margin-left:15px"> 
-		---TODO-- Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
-    whether the posture in the dataset is built based on the mesh. As for the duration of meshed whole body
-    co-speech gesture datasets, our GES-X is 15 times of the second best one (i.e.BEAT2).
+        Statistic of the MMTrail clips. These evaluation scores collectively include OCR score,
+        Video duration, optical flow score, clip duration, image quality, and aesthetic score, demonstrating
+        the richness and diversity of MMTrail, making it a valuable resource for multimedia research.
       </p>
     </div>
 	
@@ -424,11 +430,7 @@
     </div>
   </div>
     <p class="text-muted" style="text-align:left; margin-left:15px"> 
-      Dataset statistical comparison between our
-      GES-X and existing meshed co-speech gesture datasets
-      (i.e.BEAT2, TalkSHOW). Our GES-X has a
-      much larger word corpus and a more widely uniform
-      distributed gesture motion degree.
+      Word cloud of the (left) objects and (right) background in MMTrail. Most of the objects are human, and most of the backgrounds are indoor scenes like office, kitchen, etc.
     </p>
 	  </div>
     <br>
@@ -438,9 +440,7 @@
       <img src="./images/datasource.pdf" style="width: 90%" class="img-responsive"/> 
     </div>
     <p class="text-muted" style="text-align:left; margin-left:15px"> 
-  ---TODO-- Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
-  whether the posture in the dataset is built based on the mesh. As for the duration of meshed whole body
-  co-speech gesture datasets, our GES-X is 15 times of the second best one (i.e.BEAT2).
+      Distribution of video categories of MMTrail dataset.
     </p>
   </div>
   
@@ -450,9 +450,8 @@
       <img src="./images/human_eval.png" style="width: 90%" class="img-responsive"/> 
     </div>
     <p class="text-muted" style="text-align:left; margin-left:15px"> 
-  ---TODO-- Statistics comparison of our GES-X with existing ones. The dotted line “- - -” separates
-  whether the posture in the dataset is built based on the mesh. As for the duration of meshed whole body
-  co-speech gesture datasets, our GES-X is 15 times of the second best one (i.e.BEAT2).
+      Human evaluation results of the captioning models on the MMTrail-Test. The X-axis is the
+      average evaluation score from 0-10, and the Y-axis is the average word numbers.
     </p>
   </div>
 	</br>
@@ -464,8 +463,8 @@
 <section class="bg-beige-gray" id="pipeline">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12 text-center" style="margin-bottom: -30px">
-        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 30px; margin-bottom: 50px">Captioning Pipeline</h2>
+      <div class="col-lg-12 text-center" >
+        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 50px; margin-bottom:40px">Captioning Pipeline</h2>
         <!-- <h3 class="section-subheading" style="color: rgb(65, 63, 60)">Our framework CoCoGesture and key module Mixture-of-Gesture-Experts (MoGE) block. </h3> -->
       </div>
     </div>
@@ -482,7 +481,7 @@
 
 
 </br>
-	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(5, 4, 0)">CoCoGesture Framework</h5>
+	<h5 class="section-subheading" style="text-align:left; margin-top:20px; color: rgb(5, 4, 0)">MMTrail Captioning Pipeline</h5>
 	    <div class="row justify-content-md-center text-center">
       <div class="col-md centered" style="padding:1rem; margin-top:20px; ">
         <img src="./images/pipeline.png" style="width: 100%" class="img-responsive"/> 
@@ -501,8 +500,13 @@
 
 <!-- Downloads -->
 <section class="bg-beige-gray" id="download">
-  <div class="container table-container">
-    <div class="table-header">Download</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center" style="margin-bottom: 40px">
+        <h2 class="section-heading text-uppercase" style="color: rgb(5, 4, 0); margin-top: 60px">Downloads</h2>
+      </div>
+    </div>
+    <div class="table-container">
     <table class="custom-table">
         <thead>
         <tr>
@@ -515,21 +519,21 @@
         </thead>
         <tbody>
         <tr>
-            <td>Training (20M)</td>
+            <td><a href="">Training (20M)</a></td>
             <td>TODO (-)</td>
             <td>20M</td>
             <td>27.1 khrs</td>
             <td>~8.0 TB</td>
         </tr>
         <tr>
-            <td>Training (3M)</td>
+            <td><a href="">Training (3M)</a></td>
             <td>TODO (-)</td>
             <td>3.2M</td>
             <td>12.2 khrs</td>
             <td>~1.6 TB</td>
         </tr>
         <tr>
-            <td>Testing</td>
+            <td><a href="">Testing</a></td>
             <td>TODO (2.77 MB)</td>
             <td>1,000</td>
             <td>3.5 hrs</td>
@@ -537,6 +541,7 @@
         </tr>
         </tbody>
     </table>
+  </div>
 </div>
 </section>
 
@@ -583,22 +588,47 @@
 
 <pre class="hidden-xs">
 
-{'basic':       <em class="comment", style="color:#ff6600"># Each item in metadata list is a dict of a clip extracted from a longer video</em>
-    {'video_id': 'J-LQxBbQPTY',                 <em class="comment", style="color:#ff6600"># Video ID in GES-X</em>
-		'video_path': 'TED_Talk_Videos_key/J-LQxBbQPTY.mp4',                       <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
-		'video_duration': 792.52,               <em class="comment", style="color:#ff6600"># Duration of the video</em>
-		'video_resolution': [360, 640],
-		'video_fps': 25.0, 
-		'clip_id': 'J-LQxBbQPTY_0000000',           <em class="comment", style="color:#ff6600"># Clip ID</em>
-		'clip_path': 'J-LQxBbQPTY_0000000.mp4',          <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
-		'clip_duration': 0.96,            <em class="comment", style="color:#ff6600"># Duration of the clip itself/em>
-		'clip_start_end_idx': [0, 24],     <em class="comment", style="color:#ff6600"># Start frame_id and end frame_id</em>
-		'clip_start_end_time': ['00:00:00.000', '00:00:00.960']     <em class="comment", style="color:#ff6600"># Start timestamp and end timestamp</em>
-    }, 
+[
   {
-      ...
+    'basic':       <em class="comment", style="color:#ff6600"># Each item in metadata list is a dict of a clip extracted from a longer trailer video</em>
+    {
+      'video_id': 'zW1-6V_cN8I',                 <em class="comment", style="color:#ff6600"># Video ID in MMTrail</em>
+      'video_path': 'group_32/zW1-6V_cN8I.mp4',                       <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
+      'video_duration': 1645.52,               <em class="comment", style="color:#ff6600"># Duration of the video</em>
+      'video_resolution': [720, 1280],
+      'video_fps': 25.0, 
+      'clip_id': 'zW1-6V_cN8I_0000141',           <em class="comment", style="color:#ff6600"># Clip ID</em>
+      'clip_path': 'video_dataset_32/zW1-6V_cN8I_0000141.mp4',          <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
+      'clip_duration': 9.92,            <em class="comment", style="color:#ff6600"># Duration of the clip itself/em>
+      'clip_start_end_idx': [27102, 27350],     <em class="comment", style="color:#ff6600"># Start frame_id and end frame_id</em>
+      'imaging_quality': 45.510545094807945, 
+      'of_score': 6.993135, 
+      'aesthetic_score': [4.515582084655762, 4.1147027015686035, 3.796849250793457], 
+      'music_caption': [{'text': 'This song features a drum machine playing a simple beat. A siren sound is played on the low register. Then, a synth plays a descending lick and the other voice starts rapping. This is followed by a descending run. The mid range of the instruments cannot be heard. This song can be played in a meditation center.', 'time': '0:00-10:00'}],
+      'vocsl_caption': 'I was just wondering...'
+    },  
+    'camera':
+    {
+      'view_scale': '', 
+      'movement': '', 
+      'speed': ''
+    },
+    'misc':
+    {
+      'frame_caption': ['two people are standing in a room under an umbrella . ', 'a woman in a purple robe standing in front of a man . ', 'a man and a woman dressed in satin robes . '], 
+      'music_caption': [{'text': 'This music is instrumental. The tempo is medium with a synthesiser arrangement and digital drumming with a lot of vibrato and static. The music is loud, emphatic, youthful, groovy, energetic and pulsating. This music is a Electro Trap.', 'time': '0:00-10:00'}]
+    },
+    'scene':
+    {
+      'objects': [' bed', 'Woman', ' wall', ' pink robe', ' pillow'], 
+      'background': 'Bedroom', 
+      'ocr_score': 0.0, 
+      'caption': 'The video shows a woman in a pink robe standing in a room with a bed and a table, captured in a series of keyframes that show her in various poses and expressions.', 
+      'polish_caption': 'A woman in a pink robe poses and expresses herself in various ways in a room with a bed and a table, capturing her graceful movements and emotive facial expressions.', 
+      'merge_caption': 'In a cozy bedroom setting, a stunning woman adorned in a pink robe gracefully poses and expresses herself, her movements and facial expressions captured in a series of intimate moments. The scene is set against the backdrop of a comfortable bed and a table, with an umbrella standing in a corner of the room. The video features two people standing together under the umbrella, a woman in a purple robe standing confidently in front of a man, and a man and woman dressed in satin robes, all set to an energetic and pulsating electro trap beat with a synthesiser arrangement and digital drumming. The music is loud and emphatic, capturing the youthful and groovy vibe of the video.'
+    }
   }
-}
+]
 </pre>
         
         <br/>
