@@ -589,22 +589,20 @@
       'clip_path': 'video_dataset_32/zW1-6V_cN8I_0000141.mp4',          <em class="comment", style="color:#ff6600"># Relative path of the dataset root path</em>
       'clip_duration': 9.92,            <em class="comment", style="color:#ff6600"># Duration of the clip itself</em>
       'clip_start_end_idx': [27102, 27350],     <em class="comment", style="color:#ff6600"># Start frame_id and end frame_id</em>
-      'imaging_quality': 45.510545094807945, 
-      'of_score': 6.993135, 
+      'image_quality': 45.510545094807945,      <em class="comment", style="color:#ff6600"># Image quality score</em>
+      'of_score': 6.993135,       <em class="comment", style="color:#ff6600"># Optical flow score</em>
       'aesthetic_score': [4.515582084655762, 4.1147027015686035, 3.796849250793457], 
-      'music_caption': [{'text': 'This song features a drum machine playing a simple beat. A siren sound is played on the low register. Then, a synth plays a descending lick and the other voice starts rapping. This is followed by a descending run. The mid range of the instruments cannot be heard. This song can be played in a meditation center.', 'time': '0:00-10:00'}],
-      'vocsl_caption': 'I was just wondering...'
-    },  
-    'camera':
-    {
-      'view_scale': '', 
-      'movement': '', 
-      'speed': ''
+      'music_caption_wo_vocal': [{'text': 'This song features a drum machine playing a simple beat. A siren sound is played on the low register. Then, a synth plays a descending lick and the other voice starts rapping. This is followed by a descending run. The mid range of the instruments cannot be heard. This song can be played in a meditation center.', 'time': '0:00-10:00'}],
+          <em class="comment", style="color:#ff6600"># Music description of the background music without vocal (human voice).</em>
+      'vocal_caption': 'I was just wondering...'
+          <em class="comment", style="color:#ff6600"># Speech recongitation.</em>
     },
     'misc':
     {
       'frame_caption': ['two people are standing in a room under an umbrella . ', 'a woman in a purple robe standing in front of a man . ', 'a man and a woman dressed in satin robes . '], 
+          <em class="comment", style="color:#ff6600"># Coca caption of three key frame</em>
       'music_caption': [{'text': 'This music is instrumental. The tempo is medium with a synthesiser arrangement and digital drumming with a lot of vibrato and static. The music is loud, emphatic, youthful, groovy, energetic and pulsating. This music is a Electro Trap.', 'time': '0:00-10:00'}]
+          <em class="comment", style="color:#ff6600"># Music description of the background music.</em>
     },
     'scene':
     {
@@ -612,8 +610,11 @@
       'background': 'Bedroom', 
       'ocr_score': 0.0, 
       'caption': 'The video shows a woman in a pink robe standing in a room with a bed and a table, captured in a series of keyframes that show her in various poses and expressions.', 
+          <em class="comment", style="color:#ff6600"># Caption generation from LLaVA and rewrite by LLAMA-13B</em>
       'polish_caption': 'A woman in a pink robe poses and expresses herself in various ways in a room with a bed and a table, capturing her graceful movements and emotive facial expressions.', 
+          <em class="comment", style="color:#ff6600"># Polished caption generation from LLaVA and rewrite by LLAMA-13B</em>
       'merge_caption': 'In a cozy bedroom setting, a stunning woman adorned in a pink robe gracefully poses and expresses herself, her movements and facial expressions captured in a series of intimate moments. The scene is set against the backdrop of a comfortable bed and a table, with an umbrella standing in a corner of the room. The video features two people standing together under the umbrella, a woman in a purple robe standing confidently in front of a man, and a man and woman dressed in satin robes, all set to an energetic and pulsating electro trap beat with a synthesiser arrangement and digital drumming. The music is loud and emphatic, capturing the youthful and groovy vibe of the video.'
+          <em class="comment", style="color:#ff6600"># The final description of the video. It is the merge of all above captions, and merged by LLaMA</em>
     }
   }
 ]
