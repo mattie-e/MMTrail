@@ -111,6 +111,40 @@
         .custom-table tbody tr:nth-child(odd) {
             background-color: rgba(105, 98, 90, 0.2);
         }
+
+        .code-content {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 550;
+            background-color: rgb(205, 197, 185, 0.5);
+            color: rgb(125, 120, 115);
+            border-radius: 5px;
+            padding: 15px;
+            white-space: pre;
+        }
+
+        .author-list {
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .author {
+            display: block;
+        }
+        .institution {
+            font-style: italic;
+        }
+        .email {
+            font-size: 0.9em;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .footnote {
+            font-size: 0.8em;
+            margin-top: 10px;
+            text-align: center;
+        }
     </style>
     
   </head>
@@ -149,6 +183,18 @@
       <div class="container">
             <div class="row align-items-center intro-text">
               <div class="intro-lead-in">MMTrail: A Multimodal Trailer Video Dataset with Language and Music Descriptions</div>
+              <div class="author-list" style="margin-bottom: 50px">
+                <span class="author bold">Xiaowei Chi<sup>1</sup><sup>*</sup>, Aosong Cheng<sup>2</sup><sup>*</sup>, Pengjun Fang<sup>1</sup><sup>*</sup>, Yatian Wang<sup>1</sup><sup>*</sup>, Zeyue Tian<sup>1</sup><sup>*</sup>,</span>
+                <span class="author bold">Yingqing He<sup>1</sup>, Zhaoyang Liu<sup>1</sup>, Xingqun Qi<sup>1</sup>, Jiahao Pan<sup>1</sup>, Rongyu Zhang<sup>2</sup>,</span>
+                <span class="author bold">Mengfei Li<sup>1</sup>, Yanbing Jiang<sup>1</sup>, Wei Xue<sup>1</sup>, Wenhan Luo<sup>1</sup>, Qifeng Chen<sup>1</sup>,</span>
+                <span class="author bold">Shanghang Zhang<sup>2</sup><sup>&#x2709;</sup>, Qifeng Liu<sup>1</sup><sup>&#x2709;</sup>, Yike Guo<sup>1</sup></span>
+                <span class="institution"><sup>1</sup> The Hong Kong University of Science and Technology</span>
+                <span class="institution"><sup>2</sup> Peking University</span>
+                <div class="footnote">
+                    <sup>*</sup> These authors contributed equally to this work. <br>
+                    <sup>&#x2709;</sup> Corresponding authors: Shanghang Zhang (shanghang@pku.edu.cn), Qifeng Liu (liuqifeng@ust.hk)
+                </div>
+            </div>
               <div class="w-20">
                   <p><b>MMTrail</b> is a large-scale multi-modality video-language dataset with over <b>20M</b> trailer clips, 
                     featuring high-quality multimodal captions that integrate context, visual frames, and background music, 
@@ -167,7 +213,7 @@
     <div class="row">
       <!-- news column -->
       <div class="col-md-6">
-        <h4 class="service-heading">Basic informations</h4>
+        <h4 class="service-heading">Basic information</h4>
         <ul class="text-muted">
           <li class="text-muted">There are <b>290K</b> trailer videos in total, collected mostly from trailer videos.</li>
           <li class="text-muted">Videos belong to diverse categories, including film & animation, entertainment, comedy, news & politics, etc.</li>
@@ -680,7 +726,7 @@
 <em class="comment">(Please view the JSON format in larger screen.)</em>
 </pre>
 
-<pre class="hidden-xs">
+<pre class="code-content">
 
 [
   {
